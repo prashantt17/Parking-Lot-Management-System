@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "ParkingLot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Entry",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"plateNo\": \"MH12AB1234\", \"ownerName\": \"Prashant\", \"type\": \"CAR\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/parking/entry",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "parking",
+            "entry"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Exit Pay",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/parking/exit/1/pay",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "parking",
+            "exit",
+            "1",
+            "pay"
+          ]
+        }
+      }
+    }
+  ]
+}
