@@ -22,35 +22,3 @@ spring:
       mode: always
       continue-on-error: true
 
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-
-            scope:
-              - openid
-              - profile
-              - email
-          github:
-
-            scope:
-              - read:user
-              - user:email
-        provider:
-          google:
-            issuer-uri: https://accounts.google.com
-          github:
-            authorization-uri: https://github.com/login/oauth/authorize
-            token-uri: https://github.com/login/oauth/access_token
-            user-info-uri: https://api.github.com/user
-            user-name-attribute: login
-
-server:
-  port: 8080
-
-
-logging:
-  level:
-    org.hibernate.SQL: DEBUG        # logs the SQL queries
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE  # logs the bound parameters
